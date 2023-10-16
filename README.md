@@ -1,6 +1,3 @@
-# Quellen
-
-
 **Wenn nicht anders angegeben, dann zuletzt aufgerufen am 14.10.23**
 
 
