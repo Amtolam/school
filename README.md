@@ -3,7 +3,7 @@
 **Wenn nicht anders angegeben, dann zuletzt aufgerufen am 14.10.23**
 
 
-https://de.wikipedia.org/wiki/Stern Definition (05.10.23)
+https://de.wikipedia.org/wiki/Stern Definition (05.10.23) <br>
 https://www.oed.com/dictionary/star_n1 I.1.a. (05.10.23)
 https://astro.uni-bonn.de/~deboer/pdm/pdmastrostar.html (05.10.23)
 https://articles.adsabs.harvard.edu/pdf/1952ApJ...115..326S Nuclear Reactions in Stars without Hydrogen (07.10.23)
