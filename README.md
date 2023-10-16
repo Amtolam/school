@@ -2,7 +2,7 @@
 
 **Wenn nicht anders angegeben, dann zuletzt aufgerufen am 14.10.23**
 
-##Inhalt <br>
+##Inhalt
 https://de.wikipedia.org/wiki/Stern Definition (05.10.23) <br>
 https://www.oed.com/dictionary/star_n1 I.1.a. (05.10.23) <br>
 https://astro.uni-bonn.de/~deboer/pdm/pdmastrostar.html (05.10.23) <br>
@@ -22,13 +22,9 @@ https://www.youtube.com/watch?v=LS-VPyLaJFM <br>
 https://www.youtube.com/watch?v=3mnSDifDSxQ <br>
 https://imagine.gsfc.nasa.gov/science/objects/dwarfs2.html <br>
 
-##Bilder <br>
- <br>
- <br> 
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
+##Bilder
+https://www.eso.org/public/images/eso1819a/ <br>
+https://www.planet-wissen.de/technik/weltraumforschung/astronomie/astroandromedaimagogjpg100~_v-gseagaleriexl.jpg <br> 
+http://www.columbia.edu/~vjd1/sun_spectrum_1.jpg <br>
+https://esahubble.org/images/potw1648a/ <br>
+https://de.wikipedia.org/wiki/Proton-Proton-Reaktion#/media/Datei:Fusion_in_the_Sun.svg
