@@ -4,9 +4,9 @@
 **Wenn nicht anders angegeben, dann zuletzt aufgerufen am 14.10.23**
 
 
-##Inhalt
+## Inhalt
 
-[https://de.wikipedia.org/wiki/Stern] Definition (05.10.23) <br>
+[https://de.wikipedia.org/wiki/Stern]() Definition (05.10.23) <br>
 [https://www.oed.com/dictionary/star_n1 I.1.a. (05.10.23) <br>
 [https://astro.uni-bonn.de/~deboer/pdm/pdmastrostar.html (05.10.23) <br>
 [https://articles.adsabs.harvard.edu/pdf/1952ApJ...115..326S Nuclear Reactions in Stars without Hydrogen (07.10.23) <br>
@@ -25,7 +25,7 @@
 [https://www.youtube.com/watch?v=3mnSDifDSxQ <br>
 [https://imagine.gsfc.nasa.gov/science/objects/dwarfs2.html <br>
 
-##Bilder
+## Bilder
 
 [https://www.eso.org/public/images/eso1819a/ <br>
 [https://www.planet-wissen.de/technik/weltraumforschung/astronomie/astroandromedaimagogjpg100~_v-gseagaleriexl.jpg <br> 
