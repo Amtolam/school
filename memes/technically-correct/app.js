@@ -1,4 +1,4 @@
-//Code directly copied from 
+//Code directly copied from moz-extension://991005b4-5439-474f-8992-cbcbb9f87ceb/js/app.js
 
 if (window === top) {
     try {
