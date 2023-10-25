@@ -1,4 +1,4 @@
-Deutsch: Cornelsen gehört der halbe Schulbuch-Markt, bei allen geben sie online-Prüfdrucke, AUßER beim Deutschbuch, Wichser (aber arbeite dran)
+Deutsch: *noch in Arbeit*
 
 Mathe: 
 https://static.cornelsen.de/bgd/97/83/06/04/27/90/1/9783060427901_x1LIAB/index.html
