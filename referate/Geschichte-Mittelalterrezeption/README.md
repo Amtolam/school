@@ -1,5 +1,3 @@
-﻿# Quellen
-
 [https://www.deutschlandfunk.de/soziale-stellung-der-frauen-im-mittelalter-einflussreich-100.html](https://www.deutschlandfunk.de/soziale-stellung-der-frauen-im-mittelalter-einflussreich-100.html) (22.11.23) <br>
 [https://www.planetwissen.de/geschichte/mittelalter/leben_im_mittelalter/leben-mittelalter-frauen-100.html](https://www.planetwissen.de/geschichte/mittelalter/leben_im_mittelalter/leben-mittelalter-frauen-100.html) (23.11.23) <br> 
 [https://stadtflaneurin.de/mythen-mittelalter/](https://stadtflaneurin.de/mythen-mittelalter/) (23.11.23) <br>
