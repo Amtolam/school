@@ -4,7 +4,7 @@ Höchstwahrscheinlich werden nicht alle Themen zur Schulaufgabenvorbereitung ben
 Im Anschluss folgen ganz klassisch alle Quellen mit den Daten, an denen ich sie zuletzt besucht habe. <br>  
 <div style="text-align: right"> -	Nelly Scherbel (06.05.24) </div>
 
-### Videos/Webseiten zum Lernen: <br>
+### Videos/Webseiten zum Lernen:
 **Doppler-Effekt** <br>
 Prinzip: [https://youtu.be/_bP1DKIO0ow](https://youtu.be/_bP1DKIO0ow) <br>
 Gleichung: [https://youtu.be/30hbIshVAYE](https://youtu.be/30hbIshVAYE) <br>
