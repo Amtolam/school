@@ -6,10 +6,10 @@ Im Anschluss folgen ganz klassisch alle Quellen mit den Daten, an denen ich sie 
 
 ### Videos/Webseiten zum Lernen:
 **Doppler-Effekt** <br>
-Prinzip: [https://youtu.be/_bP1DKIO0ow](https://youtu.be/_bP1DKIO0ow) <br>
-Gleichung: [https://youtu.be/30hbIshVAYE](https://youtu.be/30hbIshVAYE) <br>
+&emsp; Prinzip: [https://youtu.be/_bP1DKIO0ow](https://youtu.be/_bP1DKIO0ow) <br>
+&emsp; Gleichung: [https://youtu.be/30hbIshVAYE](https://youtu.be/30hbIshVAYE) <br>
 **Schallmauer** <br>
-Prinzip: [https://www.youtube.com/watch?v=eboSSPjZYDw](https://www.youtube.com/watch?v=eboSSPjZYDw) <br>
+&ensp; Prinzip: [https://www.youtube.com/watch?v=eboSSPjZYDw](https://www.youtube.com/watch?v=eboSSPjZYDw) <br>
 
 (Falls die „weiteren Beispiele“ relevant werden sollten:) <br>
 
