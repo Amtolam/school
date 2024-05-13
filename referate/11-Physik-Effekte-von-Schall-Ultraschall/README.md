@@ -42,4 +42,5 @@ https://www.youtube.com/watch?v=eboSSPjZYDw (13.05.24) <br>
 https://www.istockphoto.com/de/foto/arzt-bereiten-eine-ultraschall-maschine-für-die-diagnose-eines-patienten-arzt-setzt-gm1184471397-333441192 (05.05.24) <br>
 https://de.wikipedia.org/wiki/Sonografie(05.05.24) <br>
 https://www.uniklinik-ulm.de/zentraler-ultraschall/ultraschall-der-schilddruese.html(05.05.24) <br>
+https://www.youtube.com/watch?v=dC4Lp7k4zrI (13.05.24)
 
