@@ -1,24 +1,24 @@
 # Referat: Effekte von Schall & Ultraschall 
-> Da die Inhalte der Referate zumindest teilweise in der Schulaufgabe drankommen werden, wollte ich euch gerne das Lernen von den einzelnen Themen erleichtern. Deswegen kommen im Folgenden zuerst Links zu Videos & Webseiten, die, meiner Meinung nach, zum Verstehen und Wiederholen sehr gut geeinigt sind. <br>
+> Da die Inhalte der Referate zumindest teilweise in der Schulaufgabe drankommen werden, wollte ich euch gerne das Lernen von den einzelnen Themen erleichtern. Deswegen kommen im Folgenden zuerst Links zu Videos, die, meiner Meinung nach, zum Verstehen und Wiederholen sehr gut geeinigt sind. <br>
 > Höchstwahrscheinlich werden nicht alle Themen zur Schulaufgabenvorbereitung benötigt werden, aber: sicher ist sicher. 
 Im Anschluss folgen ganz klassisch alle Quellen mit den Daten, an denen ich sie zuletzt besucht habe. <br>  
-<div style="text-align: right"> -	Nelly Scherbel (06.05.24) </div>
+> <div style="text-align: right"> -	Nelly Scherbel (06.05.24) </div>
 
 ### Videos/Webseiten zum Lernen:
 **Doppler-Effekt** <br>
 &emsp; Prinzip: [https://youtu.be/_bP1DKIO0ow](https://youtu.be/_bP1DKIO0ow) <br>
 &emsp; Gleichung: [https://youtu.be/30hbIshVAYE](https://youtu.be/30hbIshVAYE) <br>
 **Schallmauer** <br>
-&ensp; Prinzip: [https://www.youtube.com/watch?v=eboSSPjZYDw](https://www.youtube.com/watch?v=eboSSPjZYDw) <br>
+&emsp; Prinzip: [https://www.youtube.com/watch?v=eboSSPjZYDw](https://www.youtube.com/watch?v=eboSSPjZYDw) <br>
 
 (Falls die „weiteren Beispiele“ relevant werden sollten:) <br>
 
 **Echolot** <br>
-Prinzip & Anwendung: [https://youtu.be/iLheiD90yGQ](https://youtu.be/iLheiD90yGQ) <br>
+&emsp; Prinzip & Anwendung: [https://youtu.be/iLheiD90yGQ](https://youtu.be/iLheiD90yGQ) <br>
 **Fledermaus** <br>
-	Orientierung: [https://youtu.be/psPRC1pixas](https://youtu.be/psPRC1pixas) <br>
+&emsp; Orientierung: [https://youtu.be/psPRC1pixas](https://youtu.be/psPRC1pixas) <br>
 **Ultraschallscans** <br>
-	Prinzip: [https://www.youtube.com/watch?v=kVJ9_goljNs](https://www.youtube.com/watch?v=kVJ9_goljNs) <br>
+&emsp; Prinzip: [https://www.youtube.com/watch?v=kVJ9_goljNs](https://www.youtube.com/watch?v=kVJ9_goljNs) <br>
 
 ## Quellen:
 ### Recherche:
