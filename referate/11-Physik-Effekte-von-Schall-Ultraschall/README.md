@@ -1,6 +1,6 @@
 # Referat: Effekte von Schall & Ultraschall 
-Da die Inhalte der Referate zumindest teilweise in der Schulaufgabe drankommen werden, wollte ich euch gerne das Lernen von den einzelnen Themen erleichtern. Deswegen kommen im Folgenden zuerst Links zu Videos & Webseiten, die, meiner Meinung nach, zum Verstehen und Wiederholen sehr gut geeinigt sind. <br>
-Höchstwahrscheinlich werden nicht alle Themen zur Schulaufgabenvorbereitung benötigt werden, aber: sicher ist sicher. 
+> Da die Inhalte der Referate zumindest teilweise in der Schulaufgabe drankommen werden, wollte ich euch gerne das Lernen von den einzelnen Themen erleichtern. Deswegen kommen im Folgenden zuerst Links zu Videos & Webseiten, die, meiner Meinung nach, zum Verstehen und Wiederholen sehr gut geeinigt sind. <br>
+> Höchstwahrscheinlich werden nicht alle Themen zur Schulaufgabenvorbereitung benötigt werden, aber: sicher ist sicher. 
 Im Anschluss folgen ganz klassisch alle Quellen mit den Daten, an denen ich sie zuletzt besucht habe. <br>  
 <div style="text-align: right"> -	Nelly Scherbel (06.05.24) </div>
 
