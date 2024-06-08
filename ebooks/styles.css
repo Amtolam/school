@@ -1,6 +1,7 @@
 html { 
     font-family: Tahoma; 
     font-weight: 500;
+    background: linear-gradient(180deg, rgba(214,46,2,1) 0%, rgba(253,152,85,1) 25%, rgba(255,255,255,1) 50%, rgba(209,97,162,1) 75%, rgba(162,1,96,1) 100%); 
 }
 
 .book > a > img {
