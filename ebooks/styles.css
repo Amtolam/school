@@ -1,6 +1,6 @@
 html { 
-    font-family: Tahoma; 
-    font-weight: 500;
+    font-family: 'Segoe UI'; 
+    font-weight: 600;
     background: linear-gradient(180deg, #fdcabe, #fedbc4, #fee3e6 , #fecae8 , #feb6e1);
     min-height: 100%;
 }
@@ -16,9 +16,8 @@ html {
 }
 
 #deutsch {
-    background-image:url("https://static.cornelsen.de/media/9783464630006/9783464630006_COVER_STD_B260_X2.png");
+    background-image:url("covers/deutsch.jpg");
     background-size: cover;
-    background-blend-mode: luminosity;
     overflow: hidden;
     height: 345.289px;
     font-size: 31px;
