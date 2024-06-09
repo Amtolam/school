@@ -1,18 +1,30 @@
 html { 
     font-family: Tahoma; 
     font-weight: 500;
-    background: linear-gradient(180deg, rgba(214,46,2,1) 0%, rgba(253,152,85,1) 25%, rgba(255,255,255,1) 50%, rgba(209,97,162,1) 75%, rgba(162,1,96,1) 100%); 
+    background: linear-gradient(180deg, #fdcabe, #fedbc4, #fee3e6 , #fecae8 , #feb6e1);
+    min-height: 100%;
 }
 
-.book > a > img {
+.bookImg {
     width: 250px;
-    border: 2px solid darkGray
+    min-width: 250px;
+    min-height: 320px;
+    border: 2px solid #b5a7a8;
+    white-space-collapse: preserve-breaks;
+    font-size: 24px;
+    background-color: #fff5f5;
 }
 
 #deutsch {
-    /* copied directly from https://stackoverflow.com/questions/609273/convert-an-image-to-grayscale-in-html-css */
-    -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
-    filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+    background-image:url("https://static.cornelsen.de/media/9783464630006/9783464630006_COVER_STD_B260_X2.png");
+    background-size: cover;
+    background-blend-mode: luminosity;
+    overflow: hidden;
+    height: 345.289px;
+    font-size: 31px;
+    word-break: break-all;
+    box-sizing: border-box;
+    padding: 5px;
 }
 
 #book-wrapper {
