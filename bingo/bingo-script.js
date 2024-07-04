@@ -1,4 +1,4 @@
-const numOfCards = 25;
+const numOfCards = 38;
 let images = document.getElementsByTagName("img");
 
 numArray = Array.from(Array(numOfCards).keys())
