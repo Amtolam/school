@@ -9,7 +9,7 @@ let dayOfPlayingBingo = [1,2,3,4,5].reduce(dateSum,0);
 
 document.getElementsByTagName("title")[0].innerHTML += dayOfPlayingBingo;
 
-const numOfCards = 38;
+const numOfCards = 40;
 let images = document.getElementsByTagName("img");
 
 
