@@ -5,7 +5,7 @@ html {
     min-height: 100%;
 }
 
-#book-wrapper {
+.book-wrapper {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
