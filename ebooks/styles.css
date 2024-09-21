@@ -13,3 +13,13 @@ html {
     align-items: center;
     gap: 1em;
 }
+
+.bookImg {
+    width: 250px;
+    min-width: 250px;
+    min-height: 320px;
+    border: 2px solid #b5a7a8;
+    white-space-collapse: preserve-breaks;
+    font-size: 24px;
+    background-color: #fff5f5;
+}
