@@ -18,7 +18,6 @@ div > * {
 
 .book-wrapper {
     width: 100%;
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -29,22 +28,22 @@ div > * {
     display: inline-block;
     box-sizing: content-box;
     text-align: end; 
-    width: 250px;
-    word-spacing: 250px; /* SET SAME AS WIDTH */
+    width: 15rem;
+    word-spacing: 15rem; /* SET SAME AS WIDTH */
 }
 
 .book-img {
-    width: 250px;
-    min-width: 250px;
-    min-height: 320px;
+    width: 15rem;
+    min-width: 15rem;
+    min-height: 20rem;
     border: 2px solid var(--border-color);
     font-size: 1.5rem;
     background-color: var(--bg-color);
 }
 
 .button-box {
-    width: 250px;
-    height: 342px;
+    width: 15rem;
+    height: 21rem;
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -53,7 +52,7 @@ div > * {
 button {
     font-size: 2rem;
     border: 2px solid var(--border-color);
-    height: 112px;
+    height: 7rem;
     text-align: center;
     background-color: var(--bg-color);
 }
@@ -61,7 +60,3 @@ button {
 button:hover {
     cursor: pointer;
 }
-
-*[name="goButton"] {
-    background: red;
-  }
