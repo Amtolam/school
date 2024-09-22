@@ -1,8 +1,19 @@
+:root {
+    --bg-color: #fff5f5;
+    --border-color: #b5a7a8;
+}
+
+
 html { 
-    font-family: 'Segoe UI'; 
+    font-family: 'Segoe UI', sans-serif; 
     font-weight: 600;
     background: linear-gradient(180deg, #fdcabe, #fedbc4, #fee3e6 , #fecae8 , #feb6e1);
     min-height: 100%;
+    
+}
+
+div > * {
+    border: 1px solid red;
 }
 
 .book-wrapper {
@@ -14,12 +25,43 @@ html {
     gap: 1em;
 }
 
-.bookImg {
+.book{
+    display: inline-block;
+    box-sizing: content-box;
+    text-align: end; 
+    width: 250px;
+    word-spacing: 250px; /* SET SAME AS WIDTH */
+}
+
+.book-img {
     width: 250px;
     min-width: 250px;
     min-height: 320px;
-    border: 2px solid #b5a7a8;
-    white-space-collapse: preserve-breaks;
-    font-size: 24px;
-    background-color: #fff5f5;
+    border: 2px solid var(--border-color);
+    font-size: 1.5rem;
+    background-color: var(--bg-color);
 }
+
+.button-box {
+    width: 250px;
+    height: 342px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+button {
+    font-size: 2rem;
+    border: 2px solid var(--border-color);
+    height: 112px;
+    text-align: center;
+    background-color: var(--bg-color);
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+*[name="goButton"] {
+    background: red;
+  }
