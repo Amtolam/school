@@ -2,7 +2,7 @@
 <html lang="de">
 	<head>
 		<title>E-Books Gymnsasium</title>
-			<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="styles.css">
 	</head>
 
 
@@ -13,7 +13,8 @@
 					<div><b>11. Klasse</b></div>
 				</button>
 				
-				<button class="book-choice" name="choice-books-12" disabled>
+				<!-- DISABLED AGHAGHAGHAG -->
+				<button class="book-choice" name="choice-books-12">
 					<div><b>12. Klasse</b></div>
 				</button>
 	
@@ -54,18 +55,8 @@
 		</div>
 <br><br>
 		<div class="book-wrapper" name="books-11">
-			<div class="button-box" title="3 Buttons" name="books-12">
-				<button class="book-choice" name="choice-books-11">
-					<div><b>11. Klasse</b></div>
-				</button>
-				
-				<button class="book-choice" name="choice-books-12">
-					<div><b>12. Klasse</b></div>
-				</button>
-	
-				<button class="book-choice" name="choice-misc">
-					<div><b>Sonstige</b></div>
-				</button>
+			<div class="button-box" title="3 Buttons" name="books-11" style="display: none">
+				<!-- Gets added in post by js, bc same code AND button shenanigans-->
 			</div>
 
 			<div class="book" title="Mathe"><a href="https://static.cornelsen.de/bgd/97/83/06/04/27/90/1/9783060427901_x1LIAB/index.html"><img class="book-img" alt="loading... Mathe" src="covers/11/mathe.jpg"></a></div>
@@ -101,6 +92,8 @@
 			
 		</div>
 -->
+		<script type="text/javascript" src="./script.js">
+		</script>
 	</body>
-	<script type="teyt/javascript" src="script.js"></script>
+	
 </html>
