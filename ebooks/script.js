@@ -16,13 +16,18 @@ for (box of buttonBoxes){
     }
 }
 
+// Button structre
+const bookChoiceButtons = document.getElementsByClassName("book-choice")
+let buttonDictionary = {}
 
+for (button of bookChoiceButtons){
+    let name = button.name
+    if (!buttonDictionary[name]){
+        buttonDictionary[name] = [button]
+    } else {
+        buttonDictionary[name].push(button)
+    }
+}
 
-
-
-
-
-
-
-
+console.log(buttonDictionary)
 console.log(1)

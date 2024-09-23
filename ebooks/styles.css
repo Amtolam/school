@@ -12,9 +12,9 @@ html {
     
 }
 
-div > * {
+/* div > * {
     border: 1px solid red;
-}
+} */
 
 .book-wrapper {
     width: 100%;
@@ -55,8 +55,14 @@ button {
     height: 7rem;
     text-align: center;
     background-color: var(--bg-color);
+    opacity: 50%;
 }
 
 button:hover {
     cursor: pointer;
+}
+
+#beta {
+    color: rgba(17, 0, 0, .99);
+    opacity: 100% !important ; 
 }
