@@ -1,6 +1,6 @@
 // Copies code from first button-box to all others
 let buttonBoxes = Array.prototype.slice.call(document.getElementsByClassName("button-box"))
-const buttonBoxHTML = buttonBoxes.splice(0, 1)[0].innerHTML.replace(" disabled=\"\"", "")
+const buttonBoxHTML = buttonBoxes[0].innerHTML.replace(" disabled=\"\"", "")
 
 for (let i = 0; i < buttonBoxes.length; i++){
     buttonBoxes[i].innerHTML = buttonBoxHTML
@@ -8,26 +8,24 @@ for (let i = 0; i < buttonBoxes.length; i++){
 
 // Disables button that's not needed currently
 for (box of buttonBoxes){
-    let buttonName = box.getAttribute("name")
+    let boxName = box.getAttribute("name")
     for (let i = 0; i < box.children.length; i++){
-        if (box.children[i].name.includes(buttonName)){
+        if (box.children[i].name.includes(boxName)){
             box.children[i].setAttribute("disabled", "")
         }
     }
 }
 
 // Button structre
-const bookChoiceButtons = document.getElementsByClassName("book-choice")
-let buttonDictionary = {}
-
-for (button of bookChoiceButtons){
-    let name = button.name
-    if (!buttonDictionary[name]){
-        buttonDictionary[name] = [button]
-    } else {
-        buttonDictionary[name].push(button)
-    }
+const changeBookSeries = (event) => {
+    event.target.parentNode.parentNode.classList.toggle("hidden")
+    newSeries = event.target.name.replace("-choice", "")
+    document.querySelector(`.book-wrapper[name="${newSeries}"]`).classList.toggle("hidden")
 }
 
-console.log(buttonDictionary)
+const bookChoiceButtons = document.getElementsByClassName("book-choice")
+for (let i = 0; i < bookChoiceButtons.length; i++){
+    bookChoiceButtons[i].addEventListener("click", changeBookSeries) 
+}
+
 console.log(1)

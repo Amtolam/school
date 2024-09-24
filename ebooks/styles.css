@@ -18,6 +18,7 @@ html {
 
 .book-wrapper {
     width: 100%;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -55,14 +56,20 @@ button {
     height: 7rem;
     text-align: center;
     background-color: var(--bg-color);
-    opacity: 50%;
 }
 
 button:hover {
     cursor: pointer;
 }
 
-#beta {
-    color: rgba(17, 0, 0, .99);
-    opacity: 100% !important ; 
+button:disabled {
+    cursor: default;
+}
+
+button > * {
+    pointer-events: none;
+}
+
+.hidden {
+    display: none;
 }
