@@ -8,9 +8,9 @@ for (let i = 0; i < buttonBoxes.length; i++){
 
 // Disables button that's not needed currently
 for (box of buttonBoxes){
-    let boxName = box.getAttribute("name")
+    let wrapperName = box.parentNode.getAttribute("name")
     for (let i = 0; i < box.children.length; i++){
-        if (box.children[i].name.includes(boxName)){
+        if (box.children[i].name.includes(wrapperName)){
             box.children[i].setAttribute("disabled", "")
         }
     }

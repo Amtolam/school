@@ -73,3 +73,12 @@ button > * {
 .hidden {
     display: none;
 }
+
+#bottom-text {
+    text-align: right;
+    opacity: 25%;
+}
+
+#bottom-text:hover {
+    opacity: 100%;
+}
