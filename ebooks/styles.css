@@ -76,9 +76,11 @@ button > * {
 
 #bottom-text {
     text-align: right;
-    opacity: 25%;
+    opacity: 15%;
+    color: rgb(50,0,0);
 }
 
 #bottom-text:hover {
     opacity: 100%;
+    color: rgb(0, 10, 19);
 }
