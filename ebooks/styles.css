@@ -84,3 +84,15 @@ button > * {
     opacity: 100%;
     color: rgb(0, 10, 19);
 }
+
+.temp {
+    background-image:url("covers/12/musik.jpg");
+    background-size: cover;
+    word-wrap: break-word;
+    overflow: hidden;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
