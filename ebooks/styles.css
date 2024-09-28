@@ -12,7 +12,7 @@ html {
     
 }
 
-/* div > * {
+/* * {
     border: 1px solid red;
 } */
 
@@ -75,9 +75,11 @@ button > * {
 }
 
 #bottom-text {
-    text-align: right;
     opacity: 15%;
     color: rgb(50,0,0);
+    inline-size: max-content;
+    float: right;
+    margin: 0.5rem;
 }
 
 #bottom-text:hover {
