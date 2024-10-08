@@ -1,8 +1,8 @@
 :root {
     --bg-color: #fff5f5;
     --border-color: #b5a7a8;
+    --mix-color: rgba(255, 255, 255, 0.637);
 }
-
 
 html { 
     font-family: 'Segoe UI', sans-serif; 
@@ -88,11 +88,21 @@ button > * {
 }
 
 .temp {
-    background-image:url("covers/12/musik.jpg");
+    background-blend-mode: exclusion;
     background-size: cover;
     word-wrap: break-word;
     overflow: hidden;
     color: black;
+}
+
+#tmp1{
+    background-image:url(covers/12/mathe.jpg), linear-gradient(var(--mix-color),var(--mix-color));
+}
+#tmp2{
+    background-image:url(covers/12/mathevk.jpg), linear-gradient(var(--mix-color),var(--mix-color));
+}
+#tmp3{
+    background-image:url(covers/12/musik.jpg), linear-gradient(var(--mix-color),var(--mix-color));
 }
 
 a {
