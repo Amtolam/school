@@ -95,16 +95,25 @@ button > * {
     color: black;
 }
 
-#tmp1{
+#tmp1 {
     background-image:url(covers/12/mathe.jpg), linear-gradient(var(--mix-color),var(--mix-color));
 }
-#tmp2{
+#tmp2 {
     background-image:url(covers/12/mathevk.jpg), linear-gradient(var(--mix-color),var(--mix-color));
 }
-#tmp3{
+#tmp3 {
     background-image:url(covers/12/musik.jpg), linear-gradient(var(--mix-color),var(--mix-color));
 }
 
 a {
     text-decoration: none;
+}
+
+#info {
+    text-align: right;
+    font-size: 3rem;
+}
+
+#info:hover {
+    color: red;
 }
