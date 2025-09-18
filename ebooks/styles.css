@@ -1,7 +1,6 @@
 :root {
     --bg-color: #fff5f5;
     --border-color: #b5a7a8;
-    --mix-color: rgba(255, 255, 255, 0.637);
 }
 
 html {
@@ -52,12 +51,14 @@ html {
     position: absolute;
     left:2px;
     top:2px;
-    background-color: #cccccc88;
+    background-color: #aaaaaa88;
 }
 
 .notes {
+    color: #272524;
     word-spacing: 0rem;
     font-size:1.4rem;
+    margin: .25rem;
 }
 
 .topnav {
@@ -75,7 +76,6 @@ button {
     text-align: center;
     background-color: var(--bg-color);
     padding: 0 1rem;
-    text-wrap: no-wrap;
 }
 
 button:hover {
