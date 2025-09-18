@@ -44,7 +44,10 @@ data = {
     "Grade": "13",
     "Cover": "covers/13/info.jpg",
     "Clean": "https://www.cornelsen.de/produkte/informatik-oldenbourg-formale-sprachen-und-automaten-funktionsweise-eines-rechners-grenzen-der-berechenbarkeit-kuenstliche-intelligenz-band-fuer-das-grundlegende-anforderungsniveau-schulbuch-band-7-grundkurs-9783637029408",
+<<<<<<< HEAD
     
+=======
+>>>>>>> 5c2b8f3 (update covers (havent added sources yet))
     "Notes": ""
   },
   "Religion 13 (ev)": {
@@ -315,9 +318,15 @@ data = {
     "Subject": "Musik",
     "Grade": "11",
     "Cover": "covers/11/musik.jpg",
+<<<<<<< HEAD
     "Clean": "",
     
     "Notes": "nicht verfügbar"
+=======
+    "Clean": "https://www.helbling.com/sites/default/files/media/documents/386227575_Demo.pdf",
+    
+    "Notes": "nur ausgewählte Seiten"
+>>>>>>> 5c2b8f3 (update covers (havent added sources yet))
   },
   "Geographie 11": {
     "Subject": "Geographie",
