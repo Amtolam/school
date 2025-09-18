@@ -1,0 +1,121 @@
+:root {
+    --bg-color: #fff5f5;
+    --border-color: #b5a7a8;
+    --mix-color: rgba(255, 255, 255, 0.637);
+}
+
+html {
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 600;
+    background: linear-gradient(180deg, #fdcabe, #fedbc4, #fee3e6, #fecae8, #feb6e1);
+    min-height: 100%;
+
+}
+
+/* * {
+    border: 1px solid red;
+} */
+
+.book-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.book {
+    position: relative;
+    display: inline-block;
+    box-sizing: content-box;
+    text-align: end;
+    width: 15rem;
+    word-spacing: 15rem;
+    /* SET SAME AS WIDTH */
+}
+
+.book-img {
+    position: relative;
+    width: 15rem;
+    min-width: 15rem;
+    min-height: 20rem;
+    border: 2px solid var(--border-color);
+    font-size: 1.5rem;
+    background-color: var(--bg-color);
+}
+
+.overlay-box {
+    z-index: 1;
+    height: calc(100% - 0.5rem);
+    width: 100%;
+    position: absolute;
+    left:2px;
+    top:2px;
+    background-color: #cccccc88;
+}
+
+.notes {
+    word-spacing: 0rem;
+    font-size:1.4rem;
+}
+
+.topnav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 1rem;
+}
+
+button {
+    font-size: 1.5rem;
+    border: 2px solid var(--border-color);
+    height: 4rem;
+    text-align: center;
+    background-color: var(--bg-color);
+    padding: 0 1rem;
+    text-wrap: no-wrap;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: default;
+}
+
+button>* {
+    pointer-events: none;
+}
+
+.hidden {
+    display: none;
+}
+
+#bottom-text {
+    opacity: 15%;
+    color: rgb(50, 0, 0);
+    inline-size: max-content;
+    float: right;
+    margin: 0.5rem;
+}
+
+#bottom-text:hover {
+    opacity: 100%;
+    color: rgb(0, 10, 19);
+}
+
+a {
+    text-decoration: none;
+}
+
+#info {
+    text-align: right;
+    font-size: 3rem;
+}
+
+#info:hover {
+    color: red;
+}
