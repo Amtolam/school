@@ -11,13 +11,17 @@ let bookWrappersDict = {
     "misc":document.querySelector(".books-misc"),
     "all":document.querySelector(".books-all"),
 }
-let oldSeries = bookWrappersDict["all"]
+let curSeries = bookWrappersDict["all"]
+let curButton = document.querySelector("button:disabled")
 // Button structre
 const changeBookSeries = (event) => {
-    oldSeries.classList.toggle("hidden")
-    newSeries = event.target.name
-    oldSeries = document.querySelector(`.book-wrapper.${newSeries}`)
-    oldSeries.classList.toggle("hidden")
+    curButton.toggleAttribute("disabled")
+    curButton = event.target
+    curButton.toggleAttribute("disabled")
+    curSeries.classList.toggle("hidden")
+    curSeries = document.querySelector(`.book-wrapper.${curButton.name}`)
+    curSeries.classList.toggle("hidden")
+    console.log(event)
 }
 
 const bookChoiceButtons = document.getElementsByClassName("book-choice")
@@ -25,7 +29,6 @@ for (let i = 0; i < bookChoiceButtons.length; i++) {
     bookChoiceButtons[i].addEventListener("click", changeBookSeries)
 }
 
-console.log(bookWrappersDict)
 for (let book in data) {
     if (data[book].Notes) {
         htmlString =
@@ -55,9 +58,7 @@ for (let book in data) {
 			</a>
 		</div>`
     }
-    console.log(data[book].Grade.split(","))
     for (grade of data[book].Grade.split(",")){
-        console.log(grade, Number(grade))
         bookWrappersDict[Number(grade)].innerHTML += htmlString
     }
     bookWrappersDict["all"].innerHTML += htmlString
