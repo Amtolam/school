@@ -31,6 +31,7 @@ html {
     text-align: end;
     width: 15rem;
     word-spacing: 15rem;
+    min-height: 20rem;
     /* SET SAME AS WIDTH */
 }
 
@@ -99,7 +100,7 @@ a {
 }
 
 #bottom-text {
-    opacity: 15%;
+    opacity: 1%;
     color: rgb(50, 0, 0);
     inline-size: max-content;
     float: right;
