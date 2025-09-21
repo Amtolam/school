@@ -1,0 +1,13 @@
+#bingo-card {
+  display: grid;
+  max-height: 95vh;
+  width: 100%;
+  max-width: 95vh;
+  grid-template-rows: repeat(5, 20%);
+  grid-template-columns: repeat(5, 20%);
+  aspect-ratio: 1;
+  gap: .1em;
+  border: .1em;
+  background: black;
+  justify-content: center;
+}
