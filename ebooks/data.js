@@ -65,7 +65,7 @@ data = {
     "Subject": "Politik und Gesellschaft",
     "Grade": "13",
     "Cover": "covers/13/pug.jpg",
-    "Link": "https://www.ccbuchner.de/produkt/politik-aktuell-13-8306",
+    "Link": "https://www.ccbuchner.de/produkt/politik-aktuell-13-ga-ea-g9-9525",
     "Notes": ""
   },
   "Geographie 13": {
