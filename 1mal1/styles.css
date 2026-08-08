@@ -1,0 +1,180 @@
+:root {
+    --bg-color: #272727;
+    --border-color: #890e8d;
+
+    --button-color: #bf78c9;
+}
+
+html {
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 400;
+    background-color: var(--bg-color);
+}
+
+#wrap {
+    max-width: 1000px;
+    max-height: 2000px;
+    height: 98vh;
+}
+
+.topnav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+button,
+input[type="submit"],
+#expression,
+#hamburger,
+#answer,
+#information * {
+    font: inherit;
+    border: 2px solid var(--border-color);
+    background-color: var(--button-color);
+    text-align: center;
+    padding: 0;
+}
+
+#hamburger {
+    font-family: Arial, sans-serif;
+    width: 4rem;
+    aspect-ratio: 1;
+    border-radius: 4rem;
+    margin-left: auto;
+}
+
+form {
+    max-height: calc(98vh - 12rem);
+    height: 100%;
+}
+
+#bottomPart {
+    max-height: calc(100% - 5rem);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+button,
+input[type="submit"] {
+    height: 4rem;
+    border-radius: 12px;
+    padding: 0 1rem;
+}
+
+#expression {
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    height: 4rem;
+    border-radius: 12px;
+    margin-bottom: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+sup {
+    vertical-align: super;
+    font-size: 1.5rem;
+}
+
+#answer {
+    font-size: 2.5rem;
+    height: 100%;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+#entry {
+    border: none;
+    background-color: #00000000;
+    font-size: 2.5rem;
+    width: calc(100% - 3rem);
+    height: 100%;
+    padding: 0;
+}
+
+#information {
+    display: inline-flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 1em;
+    font-size: 1.5rem;
+}
+
+#numpad {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr) 1fr;
+    grid-template-rows: repeat(4, auto);
+    margin-top: 1rem;
+    font-size: 2.5rem;
+    gap: 0.5rem;
+    width: 75%;
+    margin: 0 auto;
+}
+
+#numpad * {
+    font: inherit;
+    max-height: 10rem;
+    min-height: 5.5rem;
+    min-width: 4rem;
+    max-width: 14rem;
+    height: calc(calc(100vh/1000)*100);
+    width: 100%;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: default;
+}
+
+#difficulties button:disabled {
+    color: #740c77;
+    font-weight: bold;
+    text-shadow: 0 0 3px #ddb8e2;
+}
+
+button * {
+    pointer-events: none;
+}
+
+dialog {
+    max-width: 1000px;
+    width: calc(100% - 24px);
+    right: auto;
+    left: 0;
+    top: 5rem;
+    bottom: auto;
+    height: calc(98vh - 5rem);
+    max-height: calc(2200px - 5rem);
+    border: 2px solid var(--border-color);
+    background-color: #976299e3;
+    backdrop-filter: blur(12px);
+    margin: 0 2px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+dialog::backdrop {
+    display: none
+}
+
+dialog button {
+    font-size: 4rem;
+    height: 6rem;
+    padding: 0 2.5rem;
+}
+
+.explanation {
+    width: 90%;
+    height: 12lh;
+    margin: 4px auto;
+}

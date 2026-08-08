@@ -1,1 +1,87 @@
+<!DOCTYPE html>
 
+<html lang="de" version="1.2">
+
+<head>
+    <title>1 Mal 1 Übung</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer type="text/javascript" src="./script.js"></script>
+    <link rel="manifest" href="manifest.json" />
+</head>
+
+<body>
+    <div id="wrap">
+        <nav class="topnav">
+            <div id="difficulties">
+                <button commandFor="easyStartBanner" command="show-modal" disabled>Easy</button>
+                <button commandFor="mediumStartBanner" command="show-modal">Medium</button>
+                <button commandFor="hardStartBanner" command="show-modal">Hard</button>
+            </div>
+            <button id="hamburger" disabled>☰</button>
+        </nav>
+
+        <div id="expression">
+            4*6
+        </div>
+
+        <form onsubmit="entryField.focus(); return checkAnswer()">
+            <div id="answer" style="height: 5rem;">
+                = <input type="tel" id="entry" inputmode="none" placeholder="..."> </input>
+                <div></div>
+            </div>
+            <div id="bottomPart">
+                <div id="information" style="margin: auto 0;">
+                    <div>Punkte für diese Aufgabe:<div id="problemScore">0</div>
+                    </div>
+                    <div> Punkte gesamt:<div id="totalScore">0</div>
+                    </div>
+                    <div>gelöste Aufgaben:<div id="problemCount">0</div>
+                    </div>
+                </div>
+                <div id="numpad">
+                    <button type="button" class="number">7</button>
+                    <button type="button" class="number">8</button>
+                    <button type="button" class="number">9</button>
+                    <button type="button" id="backspace">⇦</button>
+
+                    <button type="button" class="number">4</button>
+                    <button type="button" class="number">5</button>
+                    <button type="button" class="number">6</button>
+                    <span></span>
+
+                    <button type="button" class="number">1</button>
+                    <button type="button" class="number">2</button>
+                    <button type="button" class="number">3</button>
+                    <span></span>
+
+                    <button type="button" class="number">0</button>
+                    <span></span>
+
+                    <input type="submit" value="⮠">
+                </div>
+            </div>
+        </form>
+        <dialog class="startBanner" id="easyStartBanner" open="" popover="">
+            <div class="explanation">Löse 10 Aufgaben des kleinen 1 mal 1</div>
+            <button commandFor="easyStartBanner" command="close" onclick="entryField.focus();startGame();">
+                Start</button>
+        </dialog>
+        <dialog class="startBanner" id="mediumStartBanner" popover="">
+            <div class="explanation">Löse 20 Aufgaben des kleinen 1 mal 1 und der Quadratzahlen bis
+                20².<br>
+                Für die Quadratzahlen sind sind hier anfangs Blatt und Stift empfohlen. Abspicken ist trotzdem nicht
+                erlaubt!</div>
+            <button commandFor="mediumStartBanner" command="close" onclick="entryField.focus();startGame();">
+                Start</button>
+        </dialog>
+        <dialog class="startBanner" id="hardStartBanner" popover="">
+            <div class="explanation">Löse 50 Aufgaben des kleinen 1 mal 1, der Quadratzahlen bis 20²
+                und der 2er-Potenz-Reihe bis 2¹⁰</div>
+            <button commandFor="hardStartBanner" command="close" onclick="entryField.focus();startGame();">
+                Start</button>
+        </dialog>
+    </div>
+
+</body>
+
+</html
