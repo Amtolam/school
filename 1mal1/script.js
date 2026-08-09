@@ -70,7 +70,8 @@ function startGame() {
     startTime = performance.now()
 }
 
-
+const weightsForHarderDifficulties = [3, 15, 30, 35, 50, 65, 80, 95, 100]
+let weight
 function newProblem() {
     const problemHardness = Math.random() * 100
     if (problemHardness <= problemProbabilitiesPerDifficultyInPercent[difficulty][0]) {
@@ -85,12 +86,26 @@ function newProblem() {
         return firstNum * secondNum
     } else if (problemHardness <= problemProbabilitiesPerDifficultyInPercent[difficulty][1]) {
         const prevFirstNum = firstNum
-        firstNum = Math.ceil(Math.random() * 9) + 1
+        weight = Math.random() * 100
+        for (let i = 0; i < 9; i++) {
+            if (weight <= weightsForHarderDifficulties[i]) {
+                firstNum = i + 2
+                break
+            }
+        }
         const prevSecondNum = secondNum
-        secondNum = 0
         do {
-            secondNum = Math.ceil(Math.random() * 9) + 1
+            weight = Math.random() * 100
+            for (let i = 0; i < 9; i++) {
+                if (weight <= weightsForHarderDifficulties[i]) {
+                    console.log("AHAHHAHH")
+                    secondNum = i + 2
+                    break
+                }
+            }
         } while (prevFirstNum == firstNum && prevSecondNum == secondNum)
+
+
         expression.innerHTML = `${firstNum} · ${secondNum}`
         return firstNum * secondNum
     } else if (problemHardness <= problemProbabilitiesPerDifficultyInPercent[difficulty][2]) {
@@ -177,14 +192,30 @@ function checkAnswer() {
     updateInformation(calculateScore(performance.now() - startTime, entryField.value == solution, solution > 100))
     entryField.value = ""
     if (problemsLeftCount <= 0) {
-
-        return true
+        if (difficulty == "Hard" && totalScore >= 1900) {
+            document.querySelector("#information").innerHTML = `<div>Wow! Du hast mit ${totalScore} Punkten Stufe 'Hard' gemeistert, dich hält nichts mehr auf!</div>`
+        } else if (difficulty == "Medium" && totalScore >= 375) {
+            document.querySelector("#information").innerHTML = `<div>Wow! Du hast mit ${totalScore} Punkten Stufe 'Medium' gemeistert, jetzt musst du wohl auf 'Hard' spielen</div>`
+        } else if (difficulty == "Easy" && totalScore >= 42) {
+            document.querySelector("#information").innerHTML = `<div>Wow! Du hast mit ${totalScore} Punkten Stufe 'Easy' gemeistert, jetzt musst du wohl auf 'Medium' spielen</div>`
+        } else {
+            document.querySelector("#information").innerHTML = `<div>Hier darfst du 5s dein Endergebnis bestaunen: ${totalScore}. Und gleich in die nächste Runde!</div>`
+        }
+        entryField.toggleAttribute("disabled", true)
+        for (button of numpad.children) {
+            button.toggleAttribute("disabled", true)
+        }
+        new Promise(resolve => setTimeout(resolve, 5000)).then(() => { window.location.reload(); })
+        return false
+    } else {
+        solution = newProblem()
+        startTime = performance.now()
+        return false
     }
-    solution = newProblem()
-    startTime = performance.now()
-    return false
 }
 
 entryField.addEventListener("input", () => {
     entryField.setCustomValidity("")
 })
+
+console.log(1)
