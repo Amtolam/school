@@ -45,14 +45,16 @@ const problemCountCard = document.querySelector("#problemCount")
 
 let firstNum, secondNum, totalScore, problemCount, correctCount, startTime, problemsLeftCount, solution
 
-let problemProbabilitiesPerDifficultyInPercent = {
+const problemProbabilitiesPerDifficultyInPercent = {
     "Easy": [100, 0, 0, 0],
-    "Medium": [0, 90, 100, 0],
-    "Hard": [0, 70, 90, 100]
+    "Medium": [0, 80, 100, 0],
+    "Hard": [0, 65, 85, 100]
 }
 
 
 function startGame() {
+    document.querySelector(`#${difficulty.toLowerCase()}StartBanner`).close()
+
     solution = newProblem()
     firstNum = 0
     secondNum = 0
@@ -205,6 +207,7 @@ function checkAnswer() {
         for (button of numpad.children) {
             button.toggleAttribute("disabled", true)
         }
+        //need to make less janky
         new Promise(resolve => setTimeout(resolve, 5000)).then(() => { window.location.reload(); })
         return false
     } else {
