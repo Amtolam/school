@@ -2,7 +2,17 @@
     --bg-color: #272727;
     --border-color: #890e8d;
 
-    --button-color: #bf78c9;
+    --element-color: #bf78c9;
+}
+
+button,
+input {
+    color: black;
+}
+
+/* disable double tap to zoom on mobile */
+* {
+    touch-action: manipulation;
 }
 
 html {
@@ -12,7 +22,7 @@ html {
 }
 
 #wrap {
-    height: 90vh;
+    height: 85vh;
 }
 
 .topnav {
@@ -29,10 +39,10 @@ input[type="submit"],
 #expression,
 #hamburger,
 #answer,
-#information * {
+#information {
     font: inherit;
     border: 2px solid var(--border-color);
-    background-color: var(--button-color);
+    background-color: var(--element-color);
     text-align: center;
     padding: 0;
 }
@@ -46,12 +56,12 @@ input[type="submit"],
 }
 
 form {
-    max-height: calc(90vh - 12rem);
+    max-height: calc(85vh - 12rem);
     height: 100%;
 }
 
 #bottomPart {
-    max-height: calc(90vh - 10rem);
+    max-height: calc(85vh - 10rem);
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -85,7 +95,7 @@ sup {
     height: 3rem;
     font-size: 2rem;
     border-radius: 4px;
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
 }
 
 #entry {
@@ -98,15 +108,43 @@ sup {
 }
 
 #information {
-    margin: auto 0;
-    display: inline-flex;
-    flex-direction: row;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 2fr 3fr;
+    align-content: space-between;
     gap: 1rem;
-    margin-top: 1em;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     font-size: 1.5rem;
     max-width: 100vw;
-    overflow: scroll;
+    overflow: hidden;
 }
+
+#problemCount {
+    text-align: right;
+}
+
+#problemScore {
+    text-align: right;
+    opacity: 0;
+}
+
+#scoreCard {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#totalScore {
+    margin-left: 0.5rem;
+}
+
+#message {
+    text-align: center;
+    opacity: 0;
+}
+
+
 
 #numpad {
     display: grid;
@@ -184,4 +222,35 @@ dialog button {
     width: 90%;
     height: 12lh;
     margin: 4px auto;
+}
+
+.animate {
+    animation-duration: 0.7s;
+    animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+    animation-fill-mode: backwards;
+}
+
+
+
+/* ANIMATION */
+/* Slide In */
+.slide {
+    animation: slide 3s cubic-bezier(0.165, 0.84, 0.44, 1) 1;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translate(0, 1rem);
+    }
+
+    70% {
+        opacity: 1;
+        transform: translate(0, -2rem);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(0, 0);
+    }
 }

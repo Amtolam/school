@@ -1,5 +1,39 @@
 // Button logic
 
+let difficulty = "Easy"
+// Check if Local Storage funcionality exists
+if (typeof (Storage) !== "undefined") {
+    if (localStorage.getItem("difficulty")) {
+        difficulty = localStorage.getItem("difficulty")
+    }
+}
+
+const difficultyBar = document.querySelector("#difficulties")
+
+document.querySelector(`#${difficulty.toLowerCase()}StartBanner`).show()
+document.getElementById(difficulty).toggleAttribute("disabled")
+
+
+const changeDifficulty = (event) => {
+    for (button of difficultyBar.children) {
+        button.removeAttribute("disabled")
+    }
+    event.target.toggleAttribute("disabled")
+    document.querySelector(`#${difficulty.toLowerCase()}StartBanner`).close()
+    difficulty = event.target.innerHTML
+    document.querySelector(`#${difficulty.toLowerCase()}StartBanner`).show()
+}
+
+for (button of difficultyBar.children) {
+    button.addEventListener("click", changeDifficulty)
+}
+
+// When page is closed, store current difficulty
+window.addEventListener("beforeunload", function () {
+    localStorage.setItem("difficulty", difficulty)
+});
+
+
 const numpad = document.querySelector("#numpad")
 const entryField = document.querySelector("#entry")
 
@@ -16,23 +50,6 @@ backspaceButton.addEventListener("click", () => {
     entryField.value = entryField.value.substring(0, entryField.value.length - 1)
     entryField.focus()
 })
-
-let difficulty = "Easy"
-const difficultyBar = document.querySelector("#difficulties")
-const changeDifficulty = (event) => {
-    for (button of difficultyBar.children) {
-        button.removeAttribute("disabled")
-    }
-    event.target.toggleAttribute("disabled")
-    document.querySelector(`#${difficulty.toLowerCase()}StartBanner`).close()
-    difficulty = event.target.innerHTML
-    document.querySelector(`#${difficulty.toLowerCase()}StartBanner`).show()
-}
-
-for (button of difficultyBar.children) {
-    button.addEventListener("click", changeDifficulty)
-}
-
 
 
 
@@ -127,11 +144,12 @@ function newProblem() {
 }
 
 function updateInformation(problemScore) {
+
     problemCount++
     problemsLeftCount--
     totalScore += problemScore
     problemScoreCard.innerHTML = problemScore
-    totalScoreCard.innerHTML = totalScore
+    totalScoreCard.innerHTML = totalScore + " Pkt."
     problemCountCard.innerHTML = problemCount
 }
 
@@ -142,30 +160,41 @@ function calculateScore(timeNeeded, isSolvedCorrectly, isHardProblem = false) {
         if (!isHardProblem) {
             if (timeNeeded <= 2000) {
                 score = 5
+                displayMessage("Perfekt!")
             } else if (2000 < timeNeeded && timeNeeded <= 5000) {
                 score = 3
+                displayMessage("Niiiicht schlecht!")
             } else if (5000 < timeNeeded && timeNeeded <= 10000) {
                 score = 2
+                displayMessage("Gut!")
             } else if (10000 < timeNeeded && timeNeeded <= 60000) {
                 score = 1
+                displayMessage("Naja!")
             } else {
                 score = 0
+                displayMessage("Schläfst du?!")
             }
         } else {
             if (timeNeeded <= 10000) {
                 score = 5
+                displayMessage("Perfekt!")
             } else if (10000 < timeNeeded && timeNeeded <= 30000) {
                 score = 3
+                displayMessage("Niiiicht schlecht!")
             } else if (30000 < timeNeeded && timeNeeded <= 60000) {
                 score = 2
+                displayMessage("Gut!")
             } else if (60000 < timeNeeded && timeNeeded <= 120000) {
                 score = 1
+                displayMessage("Naja!")
             } else {
                 score = 0
+                displayMessage("Schläfst du?!")
             }
         }
     } else {
         score = -3
+        displayMessage("Was'n das? " + solution + " is es")
     }
 
     if (difficulty == "Hard") {
@@ -191,6 +220,9 @@ function checkAnswer() {
         entryField.setCustomValidity("")
     }
 
+    messageElement.classList.remove("slide")
+    problemScoreCard.classList.remove("slide")
+
     updateInformation(calculateScore(performance.now() - startTime, entryField.value == solution, solution > 100))
     entryField.value = ""
     if (problemsLeftCount <= 0) {
@@ -207,8 +239,22 @@ function checkAnswer() {
         for (button of numpad.children) {
             button.toggleAttribute("disabled", true)
         }
-        //need to make less janky
-        new Promise(resolve => setTimeout(resolve, 5000)).then(() => { window.location.reload(); })
+        //need to make less janky (update: I made it more janky)
+
+        const changeDifficultyAfterWinning = (event) => {
+            for (button of difficultyBar.children) {
+                button.removeAttribute("disabled")
+            }
+            event.target.toggleAttribute("disabled")
+            document.querySelector(`#${difficulty.toLowerCase()}StartBanner`).close()
+            difficulty = event.target.innerHTML
+
+            setTimeout(() => { window.location.reload() }, 500)
+        }
+        for (button of difficultyBar.children) {
+            button.addEventListener("click", changeDifficultyAfterWinning)
+        }
+        setTimeout(() => { window.location.reload() }, 5000)
         return false
     } else {
         solution = newProblem()
@@ -220,5 +266,17 @@ function checkAnswer() {
 entryField.addEventListener("input", () => {
     entryField.setCustomValidity("")
 })
+
+const messageElement = document.getElementById("message")
+function displayMessage(message) {
+    messageElement.innerHTML = message
+    setTimeout(() => {
+        problemScoreCard.classList.add("slide")
+        messageElement.classList.add("slide")
+    }, 10)
+}
+
+
+
 
 console.log(1)

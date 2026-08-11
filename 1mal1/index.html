@@ -14,9 +14,9 @@
     <div id="wrap">
         <nav class="topnav">
             <div id="difficulties">
-                <button commandFor="easyStartBanner" command="show-modal" disabled>Easy</button>
-                <button commandFor="mediumStartBanner" command="show-modal">Medium</button>
-                <button commandFor="hardStartBanner" command="show-modal">Hard</button>
+                <button commandFor="easyStartBanner" command="show-modal" id="Easy">Easy</button>
+                <button commandFor="mediumStartBanner" command="show-modal" id="Medium">Medium</button>
+                <button commandFor="hardStartBanner" command="show-modal" id="Hard">Hard</button>
             </div>
             <button id="hamburger" disabled>☰</button>
         </nav>
@@ -32,12 +32,12 @@
             </div>
             <div id="bottomPart">
                 <div id="information">
-                    <div>Punkte für diese Aufgabe:<div id="problemScore">0</div>
+                    <div id="scoreCard"> Score: <div id="totalScore">0</div>
                     </div>
-                    <div> Punkte gesamt:<div id="totalScore">0</div>
-                    </div>
-                    <div>gelöste Aufgaben:<div id="problemCount">0</div>
-                    </div>
+                    <div id="problemCount">0</div>
+
+                    <div class="" id="problemScore">0</div>
+                    <div class="" id="message"></div>
                 </div>
                 <div id="numpad">
                     <button type="button" class="number">7</button>
@@ -62,7 +62,7 @@
                 </div>
             </div>
         </form>
-        <dialog class="startBanner" id="easyStartBanner" open="" popover="">
+        <dialog class="startBanner" id="easyStartBanner" popover="">
             <div class="explanation">Löse 10 Aufgaben des kleinen 1 mal 1</div>
             <button commandFor="easyStartBanner" command="close" onclick="entryField.focus();startGame();">
                 Start</button>
