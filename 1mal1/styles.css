@@ -39,7 +39,8 @@ input[type="submit"],
 #expression,
 #hamburger,
 #answer,
-#information {
+#information,
+.card-style {
     font: inherit;
     border: 2px solid var(--border-color);
     background-color: var(--element-color);

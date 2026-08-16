@@ -128,16 +128,26 @@ function newProblem() {
         expression.innerHTML = `${firstNum} · ${secondNum}`
         return firstNum * secondNum
     } else if (problemHardness <= problemProbabilitiesPerDifficultyInPercent[difficulty][2]) {
+        const prevFirstNum = firstNum
         firstNum = Math.ceil(Math.random() * 11) + 10
+        const prevSecondNum = secondNum
+        secondNum = 2
         if (firstNum == 21) {
             firstNum = Math.ceil(Math.random() * 10)
         }
-        secondNum = 2
+        if (prevFirstNum == firstNum && prevSecondNum == secondNum) {
+            firstNum = Math.ceil(Math.random() * 10)
+        }
         expression.innerHTML = `${firstNum}<sup>${secondNum}</sup>`
         return firstNum ** secondNum
     } else {
+        const prevFirstNum = firstNum
         firstNum = 2
+        const prevSecondNum = secondNum
         secondNum = Math.floor(Math.random() * 11)
+        if (prevFirstNum == firstNum && prevSecondNum == secondNum) {
+            firstNum = Math.ceil(Math.random() * 10)
+        }
         expression.innerHTML = `${firstNum}<sup>${secondNum}</sup>`
         return firstNum ** secondNum
     }
@@ -240,6 +250,8 @@ function checkAnswer() {
             button.toggleAttribute("disabled", true)
         }
         //need to make less janky (update: I made it more janky)
+
+        document.querySelector("#information").removeAttribute("id")
 
         const changeDifficultyAfterWinning = (event) => {
             for (button of difficultyBar.children) {
