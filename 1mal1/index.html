@@ -21,7 +21,7 @@
             <div class="cardStyle" id="outerDailyScoreCard">Tagesscore:<div class="dailyScore">0</div>
             </div>
             <input type="checkbox" id="hamburger">
-            <label for="hamburger" id="open-sidebar-button">
+            <label for="hamburger" id="openSidebarButton">
                 <svg xmlns="http://www.w3.org/2000/svg" height="32" width="32" viewBox="0 -960 960 960">
                     <path fill="currentColor" stroke="currentColor"
                         d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
@@ -29,7 +29,7 @@
             </label>
             <label id="overlay" for="hamburger"></label>
             <div id="opened-burger">
-                <label for="hamburger" id="close-sidebar-button">
+                <label for="hamburger" id="closeSidebarButton">
                     <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
                         <path
                             d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
@@ -125,52 +125,72 @@
                     <tr>
                         <td>11<sup>2</sup></td>
                         <td>=</td>
-                        <td>121</td>
+                        <td>12<b>1</b></td>
+                        <td>--</td>
+                        <td>1<sup>2</sup>=<b>1</b></td>
                     </tr>
                     <tr>
                         <td>12<sup>2</sup></td>
                         <td>=</td>
-                        <td>144</td>
+                        <td>14<b>4</b></td>
+                        <td>--</td>
+                        <td>2<sup>2</sup>=<b>4</b></td>
                     </tr>
                     <tr>
                         <td>13<sup>2</sup></td>
                         <td>=</td>
-                        <td>169</td>
+                        <td>16<b>9</b></td>
+                        <td>--</td>
+                        <td>3<sup>2</sup>=<b>9</b></td>
                     </tr>
                     <tr>
                         <td>14<sup>2</sup></td>
                         <td>=</td>
-                        <td>196</td>
+                        <td>19<b>6</b></td>
+                        <td>--</td>
+                        <td>4<sup>2</sup>=1<b>6</b></td>
                     </tr>
                     <tr>
                         <td>15<sup>2</sup></td>
                         <td>=</td>
-                        <td>225</td>
+                        <td>22<b>5</b></td>
+                        <td>--</td>
+                        <td>5<sup>2</sup>=2<b>5</b></td>
                     </tr>
                     <tr>
                         <td>16<sup>2</sup></td>
                         <td>=</td>
-                        <td>256</td>
+                        <td>25<b>6</b></td>
+                        <td>--</td>
+                        <td>6<sup>2</sup>=3<b>6</b></td>
                     </tr>
                     <tr>
                         <td>17<sup>2</sup></td>
                         <td>=</td>
-                        <td>289</td>
+                        <td>28<b>9</b></td>
+                        <td>--</td>
+                        <td>7<sup>2</sup>=4<b>9</b></td>
                     </tr>
                     <tr>
                         <td>18<sup>2</sup></td>
                         <td>=</td>
-                        <td>324</td>
+                        <td>32<b>4</b></td>
+                        <td>--</td>
+                        <td>8<sup>2</sup>=6<b>4</b></td>
                     </tr>
                     <tr>
                         <td>19<sup>2</sup></td>
                         <td>=</td>
-                        <td>341</td>
+                        <td>36<b>1</b></td>
+                        <td>--</td>
+                        <td>9<sup>2</sup>=8<b>1</b></td>
                     </tr>
                     <tr>
                         <td>20<sup>2</sup></td>
                         <td>=</td>
-                        <td>400</td>
+                        <td>40<b>0</b></td>
+                        <td>--</td>
+                        <td>10<sup>2</sup>=10<b>0</b></td>
                     </tr>
 
                 </table>
@@ -178,13 +198,18 @@
         </nav>
 
         <div id="expression">
-            4*6
+            4 · 11
         </div>
 
         <form onsubmit="entryField.focus(); return checkAnswer()">
-            <div id="answer">
-                = <input type="tel" id="entry" inputmode="none" placeholder="..."> </input>
-                <div></div>
+            <div style="display: flex; flex-direction: row; align-items: center; gap: 8px;">
+                <div id="answer">
+                    = <input type="tel" id="entry" inputmode="none" placeholder="..."> </input>
+                    <div></div>
+                </div>
+                <img id="timerImage" src="timer.svg" width="50">
+                <div id="timer" class=""></div>
+
             </div>
             <div id="bottomPart">
                 <div id="information" class="cardStyle">
@@ -226,14 +251,14 @@
         <dialog class="startBanner" id="mediumStartBanner" popover="">
             <div class="explanation">Löse 20 Aufgaben des kleinen 1 mal 1 und der Quadratzahlen bis
                 20².<br>
-                Für die Quadratzahlen sind sind hier anfangs Blatt und Stift empfohlen. Abspicken ist trotzdem nicht
-                erlaubt!</div>
+                Schaue auf das 𝍢-Menü, um die Quadratzahlen anzuschauen</div>
             <button commandFor="mediumStartBanner" command="close" onclick="entryField.focus();setInitalGameState();">
                 Start</button>
         </dialog>
         <dialog class="startBanner" id="hardStartBanner" popover="">
             <div class="explanation">Löse 50 Aufgaben des kleinen 1 mal 1, der Quadratzahlen bis 20²
-                und der 2er-Potenz-Reihe bis 2¹⁰</div>
+                und der 2er-Potenz-Reihe bis 2¹⁰.
+                Schaue auf das 𝍢-Menü, um die Quadratzahlen/2er-Potenzen anzuschauen</div>
             <button commandFor="hardStartBanner" command="close" onclick="entryField.focus();setInitalGameState();">
                 Start</button>
         </dialog>
@@ -241,4 +266,4 @@
 
 </body>
 
-</html
+</html>

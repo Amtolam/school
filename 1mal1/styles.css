@@ -37,7 +37,7 @@ html {
 button,
 input[type="submit"],
 #expression,
-#open-sidebar-button,
+#openSidebarButton,
 #answer,
 #information,
 .cardStyle {
@@ -52,7 +52,7 @@ input[type="submit"],
     display: none;
 }
 
-#open-sidebar-button {
+#openSidebarButton {
     padding: 0.5rem;
     height: 2rem;
     aspect-ratio: 1;
@@ -85,7 +85,7 @@ input[type="submit"],
     margin: 5px;
 }
 
-#close-sidebar-button {
+#closeSidebarButton {
     position: fixed;
     padding: 2px;
     margin: 0;
@@ -105,7 +105,7 @@ input[type="submit"],
 
 
 #hamburger:checked~#opened-burger {
-    right: 0;
+    right: -2px;
 }
 
 
@@ -190,6 +190,7 @@ input[type="submit"],
 
 #answer {
     height: 3rem;
+    width: calc(100% - 4rem);
     font-size: 2rem;
     border-radius: 4px;
     margin-bottom: 0rem;
@@ -203,6 +204,36 @@ input[type="submit"],
     height: 100%;
     padding: 0;
 }
+
+@property --percentage {
+    initial-value: 0%;
+    inherits: false;
+    syntax: "<percentage>";
+}
+
+#timer {
+    border-radius: 50%;
+    width: 2.9rem;
+    height: 2.9rem;
+    position: fixed;
+    right: 10px;
+    margin-top: 5px;
+    z-index: -1;
+
+}
+
+.chart {
+    background: conic-gradient(#f1a6608a var(--percentage), var(--bg-color) 0);
+    animation: timer 60s infinite linear;
+}
+
+@keyframes timer {
+    to {
+        --percentage: 100%;
+    }
+}
+
+
 
 #information {
     height: 100%;
@@ -275,8 +306,8 @@ input[type="submit"],
 
 button:hover,
 input[type="submit"]:hover,
-#open-sidebar-button:hover,
-#close-sidebar-button:hover {
+#openSidebarButton:hover,
+#closeSidebarButton:hover {
     cursor: pointer;
 }
 
@@ -386,7 +417,7 @@ img:first-child {
     transform: scale(-1, 1);
 }
 
-#hamburger:disabled~#open-sidebar-button>svg {
+#hamburger:disabled~#openSidebarButton>svg {
     color: #444444;
 }
 

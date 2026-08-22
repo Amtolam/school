@@ -28,7 +28,7 @@ if (typeof (Storage) !== "undefined") {
 const difficultyBar = document.querySelector("#difficulties")
 
 document.querySelector(`#${difficulty}StartBanner`).show()
-document.getElementById(difficulty).toggleAttribute("disabled")
+document.getElementById(difficulty).disabled = true
 
 
 const allStartBanners = document.querySelectorAll("dialog.startBanner")
@@ -45,16 +45,16 @@ function closeAllDialogs(dialogs) {
 
 function disableAllElementsInside(parent) {
     for (element of parent) {
-        element.toggleAttribute("disabled", true)
+        element.disabled = true
     }
 }
 
 
 const changeDifficulty = (event) => {
     for (button of difficultyBar.children) {
-        button.removeAttribute("disabled")
+        button.disabled = false
     }
-    event.target.toggleAttribute("disabled", true)
+    event.target.disabled = true
     closeAllStartBanners()
     difficulty = event.target.innerHTML.toLowerCase()
     document.querySelector(`#${difficulty}StartBanner`).show()
@@ -112,6 +112,7 @@ const problemProbabilitiesPerDifficultyInPercent = {
     "hard": [0, 65, 85, 100]
 }
 
+const timer = document.querySelector("#timer")
 
 function setInitalGameState() {
     disableAllElementsInside(difficultyBar.children)
@@ -131,6 +132,7 @@ function setInitalGameState() {
         problemsLeftCount = 10
     }
 
+    timer.classList.add("chart")
     startTime = performance.now()
 }
 
@@ -150,7 +152,7 @@ function createNewProblem() {
         do {
             secondNum = randomIntBetween(1, 10)
         } while (prevFirstNum == firstNum && prevSecondNum == secondNum)
-        expression.innerHTML = `${firstNum} · ${secondNum}`
+        displayExpression(`${firstNum} · ${secondNum}`)
         return firstNum * secondNum
     } else if (weight <= problemProbabilitiesPerDifficultyInPercent[difficulty][1]) {
         weight = randomIntBetween(0, 100)
@@ -169,7 +171,7 @@ function createNewProblem() {
         } while (prevFirstNum == firstNum && prevSecondNum == secondNum)
 
 
-        expression.innerHTML = `${firstNum} · ${secondNum}`
+        displayExpression(`${firstNum} · ${secondNum}`)
         return firstNum * secondNum
     } else if (weight <= problemProbabilitiesPerDifficultyInPercent[difficulty][2]) {
         firstNum = randomIntBetween(11, 21)
@@ -180,7 +182,7 @@ function createNewProblem() {
         if (prevFirstNum == firstNum && prevSecondNum == secondNum) {
             firstNum = randomIntBetween(1, 10)
         }
-        expression.innerHTML = `${firstNum}<sup>${secondNum}</sup>`
+        displayExpression(`${firstNum}<sup>${secondNum}</sup>`)
         return firstNum ** secondNum
     } else {
         firstNum = 2
@@ -188,7 +190,7 @@ function createNewProblem() {
         if (prevFirstNum == firstNum && prevSecondNum == secondNum) {
             secondNum = randomIntBetween(5, 10)
         }
-        expression.innerHTML = `${firstNum}<sup>${secondNum}</sup>`
+        displayExpression(`${firstNum}<sup>${secondNum}</sup>`)
         return firstNum ** secondNum
     }
 }
@@ -201,6 +203,7 @@ function updateInformation(problemScore) {
     problemScoreCard.innerHTML = problemScore
     totalScoreCard.innerHTML = totalScore + " Pkt."
     problemCountCard.innerHTML = problemCount
+
 }
 
 function calculateScore(timeNeeded, isSolvedCorrectly, isHardProblem = false) {
@@ -272,13 +275,13 @@ function checkAnswer() {
 
     messageElement.classList.remove("slide")
     problemScoreCard.classList.remove("slide")
+    timer.classList.remove("chart")
+
 
     updateInformation(calculateScore(performance.now() - startTime, entryField.value == solution, solution > 100))
     entryField.value = ""
     if (problemsLeftCount <= 0) {
-
         endGame()
-
         return false
     } else {
         solution = createNewProblem()
@@ -297,45 +300,52 @@ function displayMessage(message) {
     setTimeout(() => {
         problemScoreCard.classList.add("slide")
         messageElement.classList.add("slide")
-    }, 10)
+        timer.classList.add("chart")
+    }, 50)
 }
 
-
+function displayExpression(message) {
+    expression.innerHTML = message
+}
 
 //need to make less janky still
 function endGame() {
+
+    displayExpression(`${totalScore} Punkte`)
     if (difficulty == "hard" && totalScore >= 1900) {
         document.querySelector("#information").innerHTML = `<div>Wow! Du hast mit ${totalScore} Punkten Stufe 'Hard' gemeistert, dich hält nichts mehr auf!</div>`
     } else if (difficulty == "medium" && totalScore >= 375) {
         document.querySelector("#information").innerHTML = `<div>Wow! Du hast mit ${totalScore} Punkten Stufe 'Medium' gemeistert, jetzt musst du wohl auf 'Hard' spielen</div>`
     } else if (difficulty == "easy" && totalScore >= 42) {
         document.querySelector("#information").innerHTML = `<div>Wow! Du hast mit ${totalScore} Punkten Stufe 'Easy' gemeistert, jetzt musst du wohl auf 'Medium' spielen</div>`
+    } else if (totalScore < 0) {
+        document.querySelector("#information").innerHTML = `<div>MINUSPUNKTE? Sei froh, dass du die nicht sammeln kannst! MINUSPUNKTE? Was machst du denn? Eieiei, Miuspunkte...</div>`
     } else {
         document.querySelector("#information").innerHTML = `<div>Hier darfst du 5s dein Endergebnis bestaunen: ${totalScore}. Und gleich in die nächste Runde!</div>`
     }
-    entryField.toggleAttribute("disabled", true)
+    entryField.disabled = true
     disableAllElementsInside(numpad.children)
 
     document.querySelector("#information").removeAttribute("id")
 
     const changeDifficultyAfterWinning = (event) => {
         for (button of difficultyBar.children) {
-            button.removeAttribute("disabled")
+            button.disabled = false
         }
-        event.target.toggleAttribute("disabled")
-        document.querySelector(`#${difficulty.toLowerCase()}StartBanner`).close()
-        difficulty = event.target.innerHTML
+        event.target.disabled = true
+        document.querySelector(`#${difficulty}StartBanner`).close()
+        difficulty = event.target.innerHTML.toLowerCase()
 
         setTimeout(() => { window.location.reload() }, 500)
     }
 
-    hamburgerButton.removeAttribute("disabled")
+    hamburgerButton.disabled = false
     for (button of difficultyBar.children) {
-        button.removeAttribute("disabled")
+        button.disabled = false
         button.addEventListener("click", changeDifficultyAfterWinning)
     }
 
-    document.getElementById(difficulty).toggleAttribute("disabled")
+    document.getElementById(difficulty).disabled = true
 
 
 
