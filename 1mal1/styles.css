@@ -37,10 +37,10 @@ html {
 button,
 input[type="submit"],
 #expression,
-#hamburger,
+#open-sidebar-button,
 #answer,
 #information,
-.card-style {
+.cardStyle {
     font: inherit;
     border: 2px solid var(--border-color);
     background-color: var(--element-color);
@@ -49,11 +49,92 @@ input[type="submit"],
 }
 
 #hamburger {
-    font-family: Arial, sans-serif;
-    width: 3rem;
+    display: none;
+}
+
+#open-sidebar-button {
+    padding: 0.5rem;
+    height: 2rem;
     aspect-ratio: 1;
     border-radius: 3rem;
     margin-left: auto;
+}
+
+#opened-burger {
+    flex-direction: column;
+    align-items: flex-start;
+
+
+    position: fixed;
+    top: -2px;
+    right: -105%;
+    z-index: 10;
+    width: calc(100% - 50px);
+    max-width: 400px;
+    height: 101%;
+
+    background-color: var(--element-color);
+    border: 2px solid var(--border-color);
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+    transition: 0.5s ease-out;
+
+    overflow-y: scroll;
+}
+
+#opened-burger>* {
+    margin: 5px;
+}
+
+#close-sidebar-button {
+    position: fixed;
+    padding: 2px;
+    margin: 0;
+    background-color: var(--element-color);
+    height: 24px;
+    width: 100%;
+    box-shadow: 0 5px 5px var(--element-color);
+    z-index: 11;
+}
+
+#dailyScoreCard {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+}
+
+
+#hamburger:checked~#opened-burger {
+    right: 0;
+}
+
+
+
+
+#overlay {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+
+
+
+#hamburger:checked~#overlay {
+    display: block;
+    opacity: 1;
+    backdrop-filter: blur(2px);
+    transition: opacity 1s;
+
+}
+
+@starting-style {
+    #hamburger:checked~#overlay {
+        opacity: 0;
+    }
 }
 
 form {
@@ -69,9 +150,24 @@ form {
     margin: auto 0;
 }
 
+#outerDailyScoreCard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    text-wrap: nowrap;
+}
+
+
+@media(max-width: 540px) {
+    #outerDailyScoreCard {
+        display: none;
+    }
+}
 
 button,
-input[type="submit"] {
+input[type="submit"],
+#outerDailyScoreCard {
     height: 3rem;
     border-radius: 12px;
     padding: 0 1rem;
@@ -87,7 +183,7 @@ input[type="submit"] {
     padding-top: 0.5rem;
 }
 
-sup {
+#expression sup {
     vertical-align: super;
     font-size: 1.5rem;
 }
@@ -112,7 +208,7 @@ sup {
     height: 100%;
     display: grid;
     grid-template-rows: auto auto;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 1fr 1fr 1fr;
     align-content: space-between;
     gap: 1rem;
     margin-top: 1rem;
@@ -134,6 +230,8 @@ sup {
 #scoreCard {
     display: flex;
     flex-wrap: nowrap;
+    text-wrap: nowrap;
+    grid-column: 1 / span 2;
 }
 
 #totalScore {
@@ -143,6 +241,7 @@ sup {
 #message {
     text-align: center;
     opacity: 0;
+    grid-column: 2 / span 2;
 }
 
 
@@ -169,12 +268,19 @@ sup {
     width: 100%;
 }
 
+#backspace,
+#allClear {
+    padding: 0;
+}
+
 button:hover,
-input[type="submit"]:hover {
+input[type="submit"]:hover,
+#open-sidebar-button:hover,
+#close-sidebar-button:hover {
     cursor: pointer;
 }
 
-button:disabled {
+:disabled {
     cursor: default;
 }
 
@@ -182,6 +288,11 @@ button:disabled {
     width: 100%;
     text-wrap: nowrap;
     overflow: scroll;
+    margin: 0;
+}
+
+#difficulties button {
+    height: 100%;
 }
 
 #difficulties button:disabled {
@@ -254,4 +365,33 @@ dialog button {
         opacity: 0;
         transform: translate(0, 0);
     }
+}
+
+td:first-child {
+    text-align: right;
+}
+
+.heading {
+    font-weight: 600;
+}
+
+img {
+    margin-left: 3px;
+}
+
+img:first-child {
+    -webkit-transform: scale(-1, 1);
+    -moz-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+}
+
+#hamburger:disabled~#open-sidebar-button>svg {
+    color: #444444;
+}
+
+#difficulties:has(~#hamburger:disabled)>button:disabled {
+    color: #444444;
+    text-shadow: none;
+    font-weight: 400;
 }

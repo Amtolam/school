@@ -14,11 +14,167 @@
     <div id="wrap">
         <nav class="topnav">
             <div id="difficulties">
-                <button commandFor="easyStartBanner" command="show-modal" id="Easy">Easy</button>
-                <button commandFor="mediumStartBanner" command="show-modal" id="Medium">Medium</button>
-                <button commandFor="hardStartBanner" command="show-modal" id="Hard">Hard</button>
+                <button commandFor="easyStartBanner" command="show-modal" id="easy">Easy</button>
+                <button commandFor="mediumStartBanner" command="show-modal" id="medium">Medium</button>
+                <button commandFor="hardStartBanner" command="show-modal" id="hard">Hard</button>
             </div>
-            <button id="hamburger" disabled>☰</button>
+            <div class="cardStyle" id="outerDailyScoreCard">Tagesscore:<div class="dailyScore">0</div>
+            </div>
+            <input type="checkbox" id="hamburger">
+            <label for="hamburger" id="open-sidebar-button">
+                <svg xmlns="http://www.w3.org/2000/svg" height="32" width="32" viewBox="0 -960 960 960">
+                    <path fill="currentColor" stroke="currentColor"
+                        d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                </svg>
+            </label>
+            <label id="overlay" for="hamburger"></label>
+            <div id="opened-burger">
+                <label for="hamburger" id="close-sidebar-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg>
+                </label>
+                <div id="dailyScoreCard">Tagesscore:<div class="dailyScore">0</div>
+                </div>
+                <div class="heading">Die 2er-Potenz-Reihe
+                </div>
+                <table>
+                    <tr>
+                        <td>2<sup>0</sup></td>
+                        <td>=</td>
+                        <td>1</td>
+                        <td><img src="./0-fingers.svg" height="20px"></td>
+
+                    </tr>
+                    <tr>
+                        <td>2<sup>1</sup></td>
+                        <td>=</td>
+                        <td>2</td>
+                        <td><img src="./1-fingers.svg" height="20px"></td>
+
+                    </tr>
+                    <tr>
+                        <td>2<sup>2</sup></td>
+                        <td>=</td>
+                        <td>4</td>
+                        <td><img src="./2-fingers.svg" height="20px"></td>
+
+                    </tr>
+                    <tr>
+                        <td>2<sup>3</sup></td>
+                        <td>=</td>
+                        <td>8</td>
+                        <td><img src="./3-fingers.svg" height="20px"></td>
+
+                    </tr>
+                    <tr>
+                        <td>2<sup>4</sup></td>
+                        <td>=</td>
+                        <td>16</td>
+                        <td><img src="./4-fingers.svg" height="20px"></td>
+
+                    </tr>
+                    <tr>
+                        <td>2<sup>5</sup></td>
+                        <td>=</td>
+                        <td>32</td>
+                        <td><img src="./5-fingers.svg" height="20px"></td>
+
+                    </tr>
+                    <tr>
+                        <td>2<sup>6</sup></td>
+                        <td>=</td>
+                        <td>64</td>
+                        <td><img src="./5-fingers.svg" height="20px"><img src="./1-fingers.svg" height="20px"></td>
+
+                    </tr>
+                    <tr>
+                        <td>2<sup>7</sup></td>
+                        <td>=</td>
+                        <td>128</td>
+                        <td><img src="./5-fingers.svg" height="20px"><img src="./2-fingers.svg" height="20px"></td>
+
+                    </tr>
+                    <tr>
+                        <td>2<sup>8</sup></td>
+                        <td>=</td>
+                        <td>256</td>
+                        <td><img src="./5-fingers.svg" height="20px"><img src="./3-fingers.svg" height="20px"></td>
+
+                    </tr>
+                    <tr>
+                        <td>2<sup>9</sup></td>
+                        <td>=</td>
+                        <td>512</td>
+                        <td><img src="./5-fingers.svg" height="20px"><img src="./4-fingers.svg" height="20px"></td>
+
+                    </tr>
+                    <tr>
+                        <td>2<sup>10</sup></td>
+                        <td>=</td>
+                        <td>1024</td>
+                        <td><img src="./5-fingers.svg" height="20px"><img src="./5-fingers.svg" height="20px"></td>
+
+                    </tr>
+
+                </table>
+                <div class="heading">
+                    Die Quadratzahlen</div>
+                <table>
+                    <tr>
+                        <td>11<sup>2</sup></td>
+                        <td>=</td>
+                        <td>121</td>
+                    </tr>
+                    <tr>
+                        <td>12<sup>2</sup></td>
+                        <td>=</td>
+                        <td>144</td>
+                    </tr>
+                    <tr>
+                        <td>13<sup>2</sup></td>
+                        <td>=</td>
+                        <td>169</td>
+                    </tr>
+                    <tr>
+                        <td>14<sup>2</sup></td>
+                        <td>=</td>
+                        <td>196</td>
+                    </tr>
+                    <tr>
+                        <td>15<sup>2</sup></td>
+                        <td>=</td>
+                        <td>225</td>
+                    </tr>
+                    <tr>
+                        <td>16<sup>2</sup></td>
+                        <td>=</td>
+                        <td>256</td>
+                    </tr>
+                    <tr>
+                        <td>17<sup>2</sup></td>
+                        <td>=</td>
+                        <td>289</td>
+                    </tr>
+                    <tr>
+                        <td>18<sup>2</sup></td>
+                        <td>=</td>
+                        <td>324</td>
+                    </tr>
+                    <tr>
+                        <td>19<sup>2</sup></td>
+                        <td>=</td>
+                        <td>341</td>
+                    </tr>
+                    <tr>
+                        <td>20<sup>2</sup></td>
+                        <td>=</td>
+                        <td>400</td>
+                    </tr>
+
+                </table>
+            </div>
         </nav>
 
         <div id="expression">
@@ -31,7 +187,7 @@
                 <div></div>
             </div>
             <div id="bottomPart">
-                <div id="information" class="card-style">
+                <div id="information" class="cardStyle">
                     <div id="scoreCard"> Score: <div id="totalScore">0</div>
                     </div>
                     <div id="problemCount">0</div>
@@ -48,7 +204,7 @@
                     <button type="button" class="number">4</button>
                     <button type="button" class="number">5</button>
                     <button type="button" class="number">6</button>
-                    <span></span>
+                    <button type="button" id="allClear">AC</button>
 
                     <button type="button" class="number">1</button>
                     <button type="button" class="number">2</button>
@@ -64,7 +220,7 @@
         </form>
         <dialog class="startBanner" id="easyStartBanner" popover="">
             <div class="explanation">Löse 10 Aufgaben des kleinen 1 mal 1</div>
-            <button commandFor="easyStartBanner" command="close" onclick="entryField.focus();startGame();">
+            <button commandFor="easyStartBanner" command="close" onclick="entryField.focus();setInitalGameState();">
                 Start</button>
         </dialog>
         <dialog class="startBanner" id="mediumStartBanner" popover="">
@@ -72,13 +228,13 @@
                 20².<br>
                 Für die Quadratzahlen sind sind hier anfangs Blatt und Stift empfohlen. Abspicken ist trotzdem nicht
                 erlaubt!</div>
-            <button commandFor="mediumStartBanner" command="close" onclick="entryField.focus();startGame();">
+            <button commandFor="mediumStartBanner" command="close" onclick="entryField.focus();setInitalGameState();">
                 Start</button>
         </dialog>
         <dialog class="startBanner" id="hardStartBanner" popover="">
             <div class="explanation">Löse 50 Aufgaben des kleinen 1 mal 1, der Quadratzahlen bis 20²
                 und der 2er-Potenz-Reihe bis 2¹⁰</div>
-            <button commandFor="hardStartBanner" command="close" onclick="entryField.focus();startGame();">
+            <button commandFor="hardStartBanner" command="close" onclick="entryField.focus();setInitalGameState();">
                 Start</button>
         </dialog>
     </div>
